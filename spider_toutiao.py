@@ -114,7 +114,6 @@ def get_pic_page(pic_page_url):
 def get_pic_url_list_from_detail_page(page_text):
 	pic_url_list = list()
 	reg = re.compile(r"chineseTag: '([\u4e00-\u9fa5]+)',")
-	print(page_text)
 	try:
 		search_result = re.search(reg,page_text).group(1)
 	except AttributeError:
